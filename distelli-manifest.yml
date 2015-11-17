@@ -1,4 +1,4 @@
-bmcgehee/example-node:
+dtssbde/node:
   # Distelli Manifest example
 
   PreBuild:
@@ -9,9 +9,9 @@ bmcgehee/example-node:
   Build:
     - echo "---Building---"
     - npm install
-    - cp node_modules/newrelic/newrelic.js .
-    - sed -i "s|license key here|$NR_INSTALL_KEY|g" newrelic.js
-    - sed -i "s|My Application|$NR_APP_NAME|g" newrelic.js
+    #- cp node_modules/newrelic/newrelic.js .
+    #- sed -i "s|license key here|$NR_INSTALL_KEY|g" newrelic.js
+    #- sed -i "s|My Application|$NR_APP_NAME|g" newrelic.js
     - echo "--Testing--"
     - npm test
 
@@ -31,8 +31,8 @@ bmcgehee/example-node:
     - echo "-Installing nodejs-"
     - nvm install v4.2.1
 
-  InstallTemplates:
-    - "views/index.jade"
+  #InstallTemplates:
+    #- "views/index.jade"
 
   PostInstall:
     - echo "Begin PostInstall"
